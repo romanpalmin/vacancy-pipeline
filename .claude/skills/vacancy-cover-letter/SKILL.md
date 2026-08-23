@@ -1,9 +1,9 @@
 ---
 name: vacancy-cover-letter
-description: Draft, redo, or refine the cover letter (cover-letter.txt, plain text for hh.ru) for a specific vacancy folder in the WorkHunter job-search workspace. Use when the user asks to write/draft/redo/пересобрать a cover letter / "сопроводительное письмо" for a vacancy under applications/ or applications/in-progress/, given that vacancy-summary.md and match-analysis.md already exist in that vacancy's folder.
+description: Draft, redo, or refine the cover letter (cover-letter.txt, plain text for hh.ru) for a specific vacancy folder in the job-search workspace. Use when the user asks to write/draft/redo/пересобрать a cover letter / "сопроводительное письмо" for a vacancy under applications/ or applications/in-progress/, given that vacancy-summary.md and match-analysis.md already exist in that vacancy's folder.
 ---
 
-Пишешь сопроводительное письмо (`cover-letter.txt`) для конкретной вакансии в проекте WorkHunter.
+Пишешь сопроводительное письмо (`cover-letter.txt`) для конкретной вакансии.
 
 ## Перед началом — что прочитать
 

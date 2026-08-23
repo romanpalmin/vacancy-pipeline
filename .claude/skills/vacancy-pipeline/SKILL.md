@@ -1,9 +1,9 @@
 ---
 name: vacancy-pipeline
-description: Run the WorkHunter vacancy-processing Stage A pipeline (summary → formal filter → match analysis → cover letter) for one vacancy folder, delegating each analysis step to a dedicated subagent and gating on quality checks. Use when the user asks to "прогнать вакансию по пайплайну" / "обработать вакансию через агентов" / process a vacancy end-to-end, given that vacancy-raw.md already exists in that vacancy's folder under applications/.
+description: Run the vacancy-processing Stage A pipeline (summary → formal filter → match analysis → cover letter) for one vacancy folder, delegating each analysis step to a dedicated subagent and gating on quality checks. Use when the user asks to "прогнать вакансию по пайплайну" / "обработать вакансию через агентов" / process a vacancy end-to-end, given that vacancy-raw.md already exists in that vacancy's folder under applications/.
 ---
 
-Оркестрируешь мультиагентный пайплайн обработки вакансии в проекте WorkHunter. Это автоматизация Этапа A, описанного в `applications/_template/README.md` (шаги 2-6) — раньше это делалось несколькими последовательными запросами к одному агенту, теперь три отдельных субагента с разными ролями + переиспользование уже существующего скилла `vacancy-cover-letter`.
+Оркестрируешь мультиагентный пайплайн обработки вакансии. Это автоматизация Этапа A, описанного в `applications/_template/README.md` (шаги 2-6) — раньше это делалось несколькими последовательными запросами к одному агенту, теперь три отдельных субагента с разными ролями + переиспользование уже существующего скилла `vacancy-cover-letter`.
 
 **Модель пайплайна — последовательная.** Каждый шаг зависит от файла, который написал предыдущий. Субагенты не видят историю чата друг друга — результат передаётся только через файлы в папке вакансии (`vacancy-raw.md` → `vacancy-summary.md` → `filter-check.md` → `match-analysis.md` → `cover-letter.txt`), это осознанное решение, а не ограничение.
 
